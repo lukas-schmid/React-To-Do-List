@@ -1,0 +1,207 @@
+/* ------- Basic ------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #fff;
+}
+
+/* ------- Header ------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  max-width: 820px;
+  background-color: #343434;
+  border-radius: 3px;
+}
+
+.header__title {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  margin: 5px 0px;
+  font-size: 18px;
+}
+
+.form__input {
+  margin: 5px 0px;
+  padding: 5px 5px;
+  max-height: 130px;
+  min-height: 34px;
+  font-size: 18px;
+  background-color: #626262;
+  border: none;
+  resize: none;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__button {
+  margin: 5px 0px;
+  height: 40px;
+  font-size: 17px;
+  color: #fff;
+  background-color: #b54747;
+  border: none;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #bf5757;
+}
+
+.form__button:focus {
+  outline: none;
+}
+
+.form__button:active {
+  transform: scale(0.99);
+}
+
+/* ------- Main ------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  max-width: 820px;
+  background-color: #343434;
+  border-radius: 3px;
+}
+
+.main__emptyMessage {
+  margin: 40px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.toDoCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+  margin: 10px 0px;
+  background-color: #524f4f;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.toDoCard:hover {
+  transform: scale(1.01);
+  transition: transform 0.5s ease;
+  background-color: #545151;
+}
+
+.toDoCard--done-false {
+  border-left: 6px solid #b54747;
+}
+
+.toDoCard--done-true {
+  border-left: 6px solid #02ab02;
+}
+
+.toDoCard__check-icon {
+  padding-top: 7px;
+  padding-right: 8px;
+  height: 20px;
+  text-align: right;
+}
+
+.toDoCard__check-icon--done-false {
+  display: none !important;
+}
+
+.toDoCard__check-icon--done-true {
+  color: #02ab02;
+}
+
+.toDoCard__text {
+  margin: 0px 7px;
+  min-height: 30px;
+  overflow-wrap: break-word;
+}
+
+.toDoCard__text--description {
+  margin: 5px 0px;
+}
+
+.toDoCard__text--header {
+  margin: 5px 0px;
+  font-size: 18px;
+}
+
+.toDoCard__button {
+  padding-right: 4px;
+  padding-bottom: 4px;
+  text-align: right;
+}
+
+.toDoCard__button--remove--done-false {
+  display: none;
+}
+
+.toDoCard__button--remove--done-true {
+  width: 80px;
+  height: 26px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-radius: 13px;
+  border: none;
+  background-color: #02ab02;
+  cursor: pointer;
+}
+
+.toDoCard__button--remove--done-true:hover {
+  background-color: #04d204;
+}
+
+.toDoCard__button--remove--done-true:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 440px) {
+  .header {
+    margin: 30px 20px 10px 20px;
+    padding: 10px 10px;
+  }
+
+  .main {
+    margin: 10px 20px 20px 20px;
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .header {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px;
+  }
+
+  .main {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 15px;
+  }
+}
